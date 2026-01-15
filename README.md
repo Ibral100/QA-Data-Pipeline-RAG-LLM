@@ -21,6 +21,7 @@ Modular Pipeline: Each stage can be run independently or as a complete workflow
 
 
 🔄 Data Pipeline Workflow
+
 Stage 1: Ingestion
 
 Connects to Reddit and Stack Overflow APIs
