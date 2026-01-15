@@ -1,0 +1,21 @@
+tensorflow==2.13.0
+keras==2.13.1
+transformers==4.35.2
+sentence-transformers==2.2.2
+
+# === LLM / Ollama ===
+ollama==0.1.6  # version stable compatible avec le client Python
+
+# === Vector DB ===
+qdrant-client==1.7.0
+
+# === Object Storage ===
+minio==7.2.5
+
+# === Web App UI ===
+streamlit==1.33.0
+
+# === Utilitaires ===
+pandas>=1.5
+requests>=2.31
+astor>=0.8  # pour gérer des objets AST si tu les manipules directement
