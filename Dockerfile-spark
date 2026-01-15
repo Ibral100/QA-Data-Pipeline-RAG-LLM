@@ -1,0 +1,9 @@
+FROM bitnami/spark:latest
+
+# Installer les dépendances Python
+RUN pip install pandas minio requests beautifulsoup4 
+RUN pip install --upgrade pip
+
+
+# Copier les fichiers JARs 
+COPY spark-jars/* /opt/bitnami/spark/my-jars/
