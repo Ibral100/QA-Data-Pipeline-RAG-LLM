@@ -64,3 +64,12 @@ This project implements a complete data pipeline that:
 -Retrieves relevant context based on user queries  
 -Augments LLM prompts with retrieved information   
 -Generates accurate, context-aware answers  
+
+# Tech Stack
+
+-Python 3.x: Core programming language  
+-Apache Spark: Distributed data processing  
+-MinIO: S3-compatible object storage  
+-Docker & Docker Compose: Containerization and orchestration  
+-LLM Integration: Support for various Large Language Models  
+-Vector Database: For efficient similarity search  
