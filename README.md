@@ -9,7 +9,7 @@ Chunks the data using contextual chunking strategies
 Generates embeddings and stores them for retrieval
 Powers a RAG application that answers questions using retrieved context
 
-Features
+#Features
 
 Multi-Source Ingestion: Automated data collection from Reddit and Stack Overflow APIs
 Distributed Processing: Apache Spark for scalable data cleaning and transformation
