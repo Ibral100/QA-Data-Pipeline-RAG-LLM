@@ -9,7 +9,6 @@ A complete data pipeline solution to build a Q&A system fueled by data from **Re
 ## 📋 Table of Contents
 
 - [Overview](#-overview)
-- [Architecture](#-architecture)
 - [Tech Stack](#-tech-stack)
 - [Prerequisites](#-prerequisites)
 - [Installation](#-installation)
@@ -31,46 +30,6 @@ This project implements a **Question-Answering (QA)** platform that:
 3. **Creates vector embeddings** for semantic search
 4. **Uses a local LLM** (via Ollama) to generate contextual answers
 5. **Provides an intuitive web interface** via Streamlit
-
----
-
-## 🏗 Architecture
-
-```mermaid
-flowchart LR
-    subgraph Sources["📥 Data Sources"]
-        Reddit[Reddit API]
-        Stack[StackExchange API]
-    end
-
-    subgraph Pipeline["⚙️ ETL Pipeline"]
-        Ingestion[Ingestion]
-        Cleaning[Cleaning]
-        Chunking[Contextual Chunking]
-        Embedding[Vectorization]
-    end
-
-    subgraph Storage["💾 Storage"]
-        MinIO[(MinIO<br/>Object Storage)]
-        Qdrant[(Qdrant<br/>Vector DB)]
-    end
-
-    subgraph App["🖥️ Application"]
-        Streamlit[Streamlit UI]
-        Ollama[Ollama LLM]
-    end
-
-    Reddit --> Ingestion
-    Stack --> Ingestion
-    Ingestion --> Cleaning
-    Cleaning --> Chunking
-    Chunking --> Embedding
-    Embedding --> MinIO
-    Embedding --> Qdrant
-    MinIO --> Streamlit
-    Qdrant --> Streamlit
-    Streamlit --> Ollama
-```
 
 ---
 
